@@ -1,0 +1,44 @@
+<!-- <div>question page is loaded</div>
+<div class="min-h-screen bg-plum flex flex-col items-center justify-center px-6 font-body">
+  <ng-container *ngIf="currentQuestion$ | async as question">
+    <h1 class="font-display text-4xl text-cream text-center mb-10">
+      {{ question.QuestionText }}
+    </h1>
+
+    <div class="flex flex-wrap gap-6 justify-center">
+      <button
+        *ngFor="let option of question.Options"
+        [disabled]="!option.Clickable"
+        [class]="'px-8 py-4 rounded-2xl font-display text-lg shadow-lg ' +
+                 getOptionClasses(option.ButtonStyle, option.ButtonMovement, option.Clickable)"
+        [style.color]="option.ButtonTextColor"
+        class="bg-pink-500 text-white"
+        (click)="onOptionClick(option)"
+      >
+        {{ option.ButtonText }}
+      </button>
+    </div>
+  </ng-container>
+</div> -->
+
+<div class="min-h-screen bg-plum flex flex-col items-center justify-center px-6 font-body">
+  <ng-container *ngIf="currentQuestion$ | async as question">
+    <h1 class="font-display text-4xl text-cream text-center mb-10">
+      {{ question.QuestionText }}
+    </h1>
+
+    <div class="flex flex-wrap gap-6 justify-center">
+      <button
+        *ngFor="let option of question.Options"
+        [appMouseAvoid]="!!option.Dodge"
+        [attr.aria-disabled]="!option.Clickable"
+        [class]="'bg-pink-500 text-white px-8 py-4 rounded-2xl font-display text-lg shadow-lg transition-transform duration-150 ease-out ' +
+                 getOptionClasses(option.ButtonStyle, option.ButtonMovement, option.Clickable, option.Dodge)"
+        [style.color]="option.Clickable ? option.ButtonTextColor : '#6b7280'"
+        (click)="onOptionClick(option)"
+      >
+        {{ option.ButtonText }}
+      </button>
+    </div>
+  </ng-container>
+</div>

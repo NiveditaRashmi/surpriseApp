@@ -1,0 +1,109 @@
+{
+    "AppTitle": "My Application",
+    "LandingPage": {
+        "Title": "Welcome to My Application",
+        "Description": "This is the landing page of my application.",
+        "ButtonText": "Get Started"
+    },
+    "StartQuestionId": "q1",
+    "PaymentLinkUrl": "https://rzp.io/l/your-link-id",
+    "Questions": [
+        {
+            "Id": "q1",
+            "QuestionText": "What is your favorite color?",
+            "Options": [
+                {
+                    "ButtonText": "Red",
+                    "ButtonStyle": "red",
+                    "ButtonTextColor": "white",
+                    "ButtonMovement": "dancing",
+                    "Clickable": true,
+                    "Dodge": false,
+                    "NextQuestionId": "q2"
+                },
+                {
+                    "ButtonText": "Blue",
+                    "ButtonStyle": "blue",
+                    "ButtonTextColor": "white",
+                    "ButtonMovement": "bouncing",
+                    "Clickable": true,
+                    "Dodge": true,
+                    "NextQuestionId": "q3"
+                },
+                {
+                    "ButtonText": "Green",
+                    "ButtonStyle": "green",
+                    "ButtonTextColor": "white",
+                    "ButtonMovement": "spinning",
+                    "Clickable": false,
+                    "NextQuestionId": null
+                }
+            ]
+        },
+        {
+            "Id": "q2",
+            "QuestionText": "Do you like roses or fire trucks?",
+            "Options": [
+                {
+                    "ButtonText": "Roses",
+                    "ButtonStyle": "pink",
+                    "ButtonTextColor": "white",
+                    "ButtonMovement": "spinning",
+                    "Clickable": true,
+                    "NextQuestionId": "q3"
+                },
+                {
+                    "ButtonText": "Fire Trucks",
+                    "ButtonStyle": "darkred",
+                    "ButtonTextColor": "white",
+                    "ButtonMovement": "bouncing",
+                    "Clickable": true,
+                    "NextQuestionId": null
+                },
+                {
+                    "ButtonText": "Neither",
+                    "ButtonStyle": "gray",
+                    "ButtonTextColor": "white",
+                    "ButtonMovement": "none",
+                    "Clickable": false,
+                    "NextQuestionId": null
+                }
+            ]
+        },
+        {
+            "Id": "q3",
+            "QuestionText": "Ocean or sky?",
+            "Options": [
+                {
+                    "ButtonText": "Ocean",
+                    "ButtonStyle": "navy",
+                    "ButtonTextColor": "white",
+                    "ButtonMovement": "spinning",
+                    "Clickable": true,
+                    "NextQuestionId": null
+                },
+                {
+                    "ButtonText": "Sky",
+                    "ButtonStyle": "skyblue",
+                    "ButtonTextColor": "white",
+                    "ButtonMovement": "dancing",
+                    "Clickable": true,
+                    "NextQuestionId": null
+                },
+                {
+                    "ButtonText": "Both",
+                    "ButtonStyle": "gray",
+                    "ButtonTextColor": "white",
+                    "ButtonMovement": "none",
+                    "Clickable": false,
+                    "NextQuestionId": null
+                }
+            ]
+        }
+    ],
+    "EndingPage": {
+        "Title": "Thank you for participating!",
+        "Description": "We appreciate your feedback.",
+        "ButtonText": "Finish"
+    }
+}

@@ -1,0 +1,12 @@
+<!-- landing-page.component.html -->
+<div class="min-h-screen bg-plum flex flex-col items-center justify-center px-6 text-center font-body">
+  <h1 class="font-display text-5xl text-cream mb-4">{{ landingPage.Title }}</h1>
+  <p class="text-cream/80 text-lg mb-8 max-w-md">{{ landingPage.Description }}</p>
+  <button
+    (click)="onGetStarted()"
+    class="bg-pink-500 text-white font-display text-xl px-10 py-4 rounded-2xl shadow-lg
+           hover:scale-105 transition-transform duration-200"
+  >
+    {{ landingPage.ButtonText }}
+  </button>
+</div>
