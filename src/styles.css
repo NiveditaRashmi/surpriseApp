@@ -1,3 +1,171 @@
 /* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
 
-@import 'tailwindcss';
+@theme {
+  --color-coral: #FF6B6B;
+  --color-sunshine: #FFD93D;
+  --color-teal: #4ECDC4;
+  --color-plum: #2D2A4A;
+  --color-cream: #FFF8F0;
+
+  --font-display: "Baloo 2", cursive;
+  --font-body: "Inter", sans-serif;
+
+  --animate-dance: dance 0.6s ease-in-out infinite;
+}
+
+@keyframes dance {
+  0%, 100% { transform: rotate(-6deg) translateY(0); }
+  50% { transform: rotate(6deg) translateY(-4px); }
+}
+/* Theme-driven CSS variables, set per theme via a class on <body> */
+body.theme-love {
+  --theme-bg-gradient: radial-gradient(circle at 50% 45%, #fff8fb 0%, #ffeef5 45%, #ffdce9 100%);
+  --theme-primary: #d81b60;
+  --theme-accent: #e91e63;
+  --theme-subtitle: #9b6278;
+  --theme-question-text: #6d4052;
+  --theme-button-gradient: linear-gradient(135deg, #ec407a, #d81b60);
+  --theme-icon-bg: #fff0f6;
+}
+
+body.theme-christmas {
+  --theme-bg-gradient: radial-gradient(circle at 50% 45%, #f5fbff 0%, #e3f2fd 45%, #cde7fa 100%);
+  --theme-primary: #1565c0;
+  --theme-accent: #1976d2;
+  --theme-subtitle: #5c7a99;
+  --theme-question-text: #35526b;
+  --theme-button-gradient: linear-gradient(135deg, #42a5f5, #1565c0);
+  --theme-icon-bg: #e8f4ff;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: var(--theme-bg-gradient);
+}
+
+/* Shared card used by every page */
+.app-card {
+  width: min(90vw, 430px);
+  padding: 45px 35px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 28px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1), 0 0 50px rgba(0, 0, 0, 0.06);
+  animation: cardAppear 1s ease-out;
+}
+
+@keyframes cardAppear {
+  from { opacity: 0; transform: translateY(25px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.app-card-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--theme-icon-bg);
+  font-size: 36px;
+  color: var(--theme-accent);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  animation: heartbeat 2.2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  15%      { transform: scale(1.08); }
+  30%      { transform: scale(1); }
+  45%      { transform: scale(1.05); }
+}
+
+.app-card h1 {
+  font-size: 32px;
+  color: var(--theme-primary);
+  margin-bottom: 10px;
+}
+
+.app-card .subtitle {
+  font-size: 16px;
+  color: var(--theme-subtitle);
+}
+
+.app-card .prompt {
+  margin-top: 25px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--theme-question-text);
+}
+
+.app-card .app-button {
+  margin-top: 25px;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--theme-button-gradient);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.app-card .app-button:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); }
+.app-card .app-button:active { transform: scale(0.96); }
+
+.page-wrapper {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Nervous jitter — cursor is getting close but hasn't triggered a jump yet */
+@keyframes shy-nervous {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  25%      { transform: translate(-2px, 1px) rotate(-2deg); }
+  50%      { transform: translate(2px, -1px) rotate(2deg); }
+  75%      { transform: translate(-1px, 2px) rotate(-1deg); }
+}
+
+.shy-nervous {
+  animation: shy-nervous 0.15s ease-in-out infinite;
+}
+
+/* Flee — quick squash-and-stretch the instant it jumps away */
+@keyframes shy-flee {
+  0%   { transform: scale(1, 1) rotate(0deg); }
+  30%  { transform: scale(0.8, 1.25) rotate(var(--flee-tilt, 0deg)); }
+  60%  { transform: scale(1.15, 0.85) rotate(var(--flee-tilt, 0deg)); }
+  100% { transform: scale(1, 1) rotate(0deg); }
+}
+
+.shy-flee {
+  animation: shy-flee 0.35s ease-out;
+}
+
+/* Little face badge that appears while the button is actively dodging */
+.shy-face {
+  position: absolute;
+  top: -14px;
+  right: -6px;
+  font-size: 18px;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  opacity: 0;
+}
+
+.shy-face.visible {
+  opacity: 1;
+}

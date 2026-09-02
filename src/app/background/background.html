@@ -1,0 +1,10 @@
+<div class="glow-layer" *ngIf="showGlow">
+  <div class="glow one" [style.background]="glowColor"></div>
+  <div class="glow two" [style.background]="glowColor"></div>
+  <div class="glow three" [style.background]="glowColor"></div>
+</div>
+
+<ngx-particles
+  id="app-background-particles"
+  [options]="particlesOptions"
+></ngx-particles>
