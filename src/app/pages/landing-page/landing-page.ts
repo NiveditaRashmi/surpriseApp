@@ -3,9 +3,10 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { QuizStateService } from '../../quiz-state-service';
 import { LandingPage } from '../../models/question-config.model';
+import { CommonModule } from '@angular/common';
 
 @Component({
-  imports: [],
+  imports: [CommonModule],
   selector: 'app-landing-page',
   templateUrl: './landing-page.html',
   styleUrl: './landing-page.css',

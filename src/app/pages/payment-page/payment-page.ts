@@ -4,15 +4,22 @@ import { QuizStateService } from '../../quiz-state-service';
 
 @Component({
   selector: 'app-payment-page',
-  templateUrl: './payment-page.html'
+  templateUrl: './payment-page.html',
+  imports: [],
+  styleUrl: './payment-page.css',
 })
 export class PaymentPageComponent implements OnInit {
   private quizState = inject(QuizStateService);
 
   ngOnInit(): void {
+    // const paymentLinkUrl = this.quizState.getConfig().PaymentLinkUrl;
+    // setTimeout(() => {
+    //   window.location.href = paymentLinkUrl;
+    // }, 1500);
+  }
+
+  goToPayment(): void {
     const paymentLinkUrl = this.quizState.getConfig().PaymentLinkUrl;
-    setTimeout(() => {
-      window.location.href = paymentLinkUrl;
-    }, 1500);
+    window.location.href = paymentLinkUrl;
   }
 }
