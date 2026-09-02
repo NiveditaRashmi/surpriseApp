@@ -1,111 +1,82 @@
 {
-    "AppTitle": "My Application",
+    "AppTitle": "Date Night Decider",
     "Theme": "love",
     "LandingPage": {
-        "Title": "Welcome to My Application",
-        "Description": "This is the landing page of my application.",
-         "Prompt": "Are you ready? 😏",
-        "ButtonText": "Get Started 💕"
+        "Title": "Hello Hubby ❤️",
+        "Description": "I've got a few very important questions for you...",
+        "Prompt": "Are you ready? 😏",
+        "ButtonText": "Let's Play 💕"
     },
     "StartQuestionId": "q1",
-    "PaymentLinkUrl": "https://rzp.io/l/your-link-id",
+    "PaymentLinkUrl": "https://rzp.io/rzp/P3G0QR2",
     "Questions": [
         {
             "Id": "q1",
-            "QuestionText": "What is your favorite color?",
+            "QuestionText": "On a scale of amazing to also amazing, how lucky are you to have me?",
             "Options": [
-                {
-                    "ButtonText": "Red",
-                    "ButtonStyle": "red",
-                    "ButtonTextColor": "white",
-                    "ButtonMovement": "dancing",
-                    "Clickable": true,
-                    "Dodge": false,
-                    "NextQuestionId": "q2"
-                },
-                {
-                    "ButtonText": "Blue",
-                    "ButtonStyle": "blue",
-                    "ButtonTextColor": "white",
-                    "ButtonMovement": "bouncing",
-                    "Clickable": true,
-                    "Dodge": true,
-                    "NextQuestionId": "q3"
-                },
-                {
-                    "ButtonText": "Green",
-                    "ButtonStyle": "green",
-                    "ButtonTextColor": "white",
-                    "ButtonMovement": "spinning",
-                    "Clickable": false,
-                    "NextQuestionId": null
-                }
+                { "ButtonText": "Extremely lucky", "ButtonStyle": "red", "ButtonTextColor": "white", "ButtonMovement": "dancing", "Clickable": true, "NextQuestionId": "q2" },
+                { "ButtonText": "Unbelievably lucky", "ButtonStyle": "blue", "ButtonTextColor": "white", "ButtonMovement": "bouncing", "Clickable": true, "NextQuestionId": "q2" },
+                { "ButtonText": "I need to think", "ButtonStyle": "green", "ButtonTextColor": "white", "ButtonMovement": "spinning", "Clickable": false, "NextQuestionId": null }
             ]
         },
         {
             "Id": "q2",
-            "QuestionText": "Do you like roses or fire trucks?",
+            "QuestionText": "Who is a better cook, you or me?",
             "Options": [
-                {
-                    "ButtonText": "Roses",
-                    "ButtonStyle": "pink",
-                    "ButtonTextColor": "white",
-                    "ButtonMovement": "spinning",
-                    "Clickable": true,
-                    "NextQuestionId": "q3"
-                },
-                {
-                    "ButtonText": "Fire Trucks",
-                    "ButtonStyle": "darkred",
-                    "ButtonTextColor": "white",
-                    "ButtonMovement": "bouncing",
-                    "Clickable": true,
-                    "NextQuestionId": null
-                },
-                {
-                    "ButtonText": "Neither",
-                    "ButtonStyle": "gray",
-                    "ButtonTextColor": "white",
-                    "ButtonMovement": "none",
-                    "Clickable": false,
-                    "NextQuestionId": null
-                }
+                { "ButtonText": "Obviously you", "ButtonStyle": "red", "ButtonTextColor": "white", "ButtonMovement": "bouncing", "Clickable": true, "NextQuestionId": "q3" },
+                { "ButtonText": "It's close, but you", "ButtonStyle": "blue", "ButtonTextColor": "white", "ButtonMovement": "dancing", "Clickable": true, "NextQuestionId": "q3" },
+                { "ButtonText": "Me, honestly", "ButtonStyle": "green", "ButtonTextColor": "white", "ButtonMovement": "spinning", "Clickable": true, "Dodge": true, "NextQuestionId": "q3" }
             ]
         },
         {
             "Id": "q3",
-            "QuestionText": "Ocean or sky?",
+            "QuestionText": "What's the secret to a happy marriage?",
             "Options": [
-                {
-                    "ButtonText": "Ocean",
-                    "ButtonStyle": "navy",
-                    "ButtonTextColor": "white",
-                    "ButtonMovement": "spinning",
-                    "Clickable": true,
-                    "NextQuestionId": null
-                },
-                {
-                    "ButtonText": "Sky",
-                    "ButtonStyle": "skyblue",
-                    "ButtonTextColor": "white",
-                    "ButtonMovement": "dancing",
-                    "Clickable": true,
-                    "NextQuestionId": null
-                },
-                {
-                    "ButtonText": "Both",
-                    "ButtonStyle": "gray",
-                    "ButtonTextColor": "white",
-                    "ButtonMovement": "none",
-                    "Clickable": false,
-                    "NextQuestionId": null
-                }
+                { "ButtonText": "Whatever she says", "ButtonStyle": "red", "ButtonTextColor": "white", "ButtonMovement": "dancing", "Clickable": true, "NextQuestionId": "q4" },
+                { "ButtonText": "Saying yes to date nights", "ButtonStyle": "blue", "ButtonTextColor": "white", "ButtonMovement": "bouncing", "Clickable": true, "NextQuestionId": "q4" },
+                { "ButtonText": "50/50 compromise", "ButtonStyle": "gray", "ButtonTextColor": "white", "ButtonMovement": "none", "Clickable": false, "NextQuestionId": null }
+            ]
+        },
+        {
+            "Id": "q4",
+            "QuestionText": "Speaking of date nights... when did we last go on one? 👀",
+            "Options": [
+                { "ButtonText": "Too long ago", "ButtonStyle": "red", "ButtonTextColor": "white", "ButtonMovement": "spinning", "Clickable": true, "NextQuestionId": "q5" },
+                { "ButtonText": "We should fix that tonight", "ButtonStyle": "blue", "ButtonTextColor": "white", "ButtonMovement": "dancing", "Clickable": true, "NextQuestionId": "q5" },
+                { "ButtonText": "Last week (wrong answer)", "ButtonStyle": "green", "ButtonTextColor": "white", "ButtonMovement": "bouncing", "Clickable": true, "Dodge": true, "NextQuestionId": "q5" }
+            ]
+        },
+        {
+            "Id": "q5",
+            "QuestionText": "Great! What kind of food are we feeling tonight?",
+            "Options": [
+                { "ButtonText": "Italian 🍝", "ButtonStyle": "red", "ButtonTextColor": "white", "ButtonMovement": "dancing", "Clickable": true, "NextQuestionId": "q6" },
+                { "ButtonText": "Something fancy 🥂", "ButtonStyle": "blue", "ButtonTextColor": "white", "ButtonMovement": "bouncing", "Clickable": true, "NextQuestionId": "q6" },
+                { "ButtonText": "Whatever's cheapest", "ButtonStyle": "gray", "ButtonTextColor": "white", "ButtonMovement": "none", "Clickable": false, "NextQuestionId": null }
+            ]
+        },
+        {
+            "Id": "q6",
+            "QuestionText": "Perfect. And who's the lucky one who gets to plan it?",
+            "Options": [
+                { "ButtonText": "Me, of course", "ButtonStyle": "red", "ButtonTextColor": "white", "ButtonMovement": "bouncing", "Clickable": true, "NextQuestionId": "q7" },
+                { "ButtonText": "I'll book the table", "ButtonStyle": "blue", "ButtonTextColor": "white", "ButtonMovement": "spinning", "Clickable": true, "NextQuestionId": "q7" },
+                { "ButtonText": "You plan it", "ButtonStyle": "green", "ButtonTextColor": "white", "ButtonMovement": "none", "Clickable": true, "Dodge": true, "NextQuestionId": "q7" }
+            ]
+        },
+        {
+            "Id": "q7",
+            "QuestionText": "One more thing before tonight... 👀",
+            "Options": [
+                { "ButtonText": "What's up?", "ButtonStyle": "red", "ButtonTextColor": "white", "ButtonMovement": "dancing", "Clickable": true, "NextQuestionId": null },
+                { "ButtonText": "Tell me", "ButtonStyle": "blue", "ButtonTextColor": "white", "ButtonMovement": "bouncing", "Clickable": true, "NextQuestionId": null },
+                { "ButtonText": "I have a bad feeling", "ButtonStyle": "gray", "ButtonTextColor": "white", "ButtonMovement": "none", "Clickable": false, "NextQuestionId": null }
             ]
         }
     ],
     "EndingPage": {
-        "Title": "Thank you for participating!",
-        "Description": "We appreciate your feedback.",
+        "Title": "Perfect, thank you! 💃",
+        "Description": "New dress: sorted. The date is on you tonight. See you soon, love! 😘",
         "ButtonText": "Finish"
     }
 }
