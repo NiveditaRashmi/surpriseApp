@@ -1,5 +1,6 @@
 export interface SurpriseAppConfig {
     Apptitle: string;
+    Theme?: string;
     LandingPage: LandingPage;
     PaymentLinkUrl: string;
     StartQuestionId: string,
@@ -10,6 +11,7 @@ export interface SurpriseAppConfig {
 export interface LandingPage {
     Title: string;
     Description: string;
+    Prompt?: string;
     ButtonText: string;
 }
 

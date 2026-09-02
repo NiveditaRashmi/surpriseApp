@@ -1,0 +1,30 @@
+:host {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.glow-layer {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.glow {
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(90px);
+  animation: glowMove 15s ease-in-out infinite alternate;
+}
+
+.glow.one { top: -150px; left: -120px; }
+.glow.two { right: -150px; top: 30%; animation-delay: 3s; }
+.glow.three { bottom: -180px; left: 35%; animation-delay: 6s; }
+
+@keyframes glowMove {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(60px, 40px); }
+}

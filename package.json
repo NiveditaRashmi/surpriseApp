@@ -17,6 +17,10 @@
     "@angular/forms": "^22.1.0",
     "@angular/platform-browser": "^22.1.0",
     "@angular/router": "^22.1.0",
+    "@tsparticles/angular": "^4.4.0",
+    "@tsparticles/engine": "^4.4.0",
+    "@tsparticles/shape-heart": "^4.4.0",
+    "@tsparticles/slim": "^4.4.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

@@ -1,12 +1,9 @@
-<!-- landing-page.component.html -->
-<div class="min-h-screen bg-plum flex flex-col items-center justify-center px-6 text-center font-body">
-  <h1 class="font-display text-5xl text-cream mb-4">{{ landingPage.Title }}</h1>
-  <p class="text-cream/80 text-lg mb-8 max-w-md">{{ landingPage.Description }}</p>
-  <button
-    (click)="onGetStarted()"
-    class="bg-pink-500 text-white font-display text-xl px-10 py-4 rounded-2xl shadow-lg
-           hover:scale-105 transition-transform duration-200"
-  >
-    {{ landingPage.ButtonText }}
-  </button>
+<div class="page-wrapper">
+  <div class="app-card">
+    <div class="app-card-icon">♥</div>
+    <h1>{{ landingPage.Title }}</h1>
+    <p class="subtitle">{{ landingPage.Description }}</p>
+    <p class="prompt" *ngIf="landingPage.Prompt">{{ landingPage.Prompt }}</p>
+    <button class="app-button" (click)="onGetStarted()">{{ landingPage.ButtonText }}</button>
+  </div>
 </div>

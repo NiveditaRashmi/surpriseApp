@@ -1,9 +1,11 @@
 {
     "AppTitle": "My Application",
+    "Theme": "love",
     "LandingPage": {
         "Title": "Welcome to My Application",
         "Description": "This is the landing page of my application.",
-        "ButtonText": "Get Started"
+         "Prompt": "Are you ready? 😏",
+        "ButtonText": "Get Started 💕"
     },
     "StartQuestionId": "q1",
     "PaymentLinkUrl": "https://rzp.io/l/your-link-id",
