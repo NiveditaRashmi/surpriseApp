@@ -32,7 +32,7 @@ export class QuizStateService {
 
     // undefined (not null) now means "go to payment"
     if (!option.NextQuestionId) {
-      this.router.navigate(['/payment']);
+      this.router.navigate(['/ending']);
       return;
     }
 
@@ -40,7 +40,7 @@ export class QuizStateService {
     console.log(`Navigating to next question with Id "${option.NextQuestionId}":`, nextQuestion);
     if (!nextQuestion) {
       console.error(`Question with Id "${option.NextQuestionId}" not found in config.`);
-      this.router.navigate(['/payment']);
+      this.router.navigate(['/ending']);
       return;
     }
 
