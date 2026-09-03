@@ -8,7 +8,7 @@
         "ButtonText": "Let's Play 💕"
     },
     "StartQuestionId": "q1",
-    "PaymentLinkUrl": "https://rzp.io/rzp/v8OjqRXK",
+    "PaymentLinkUrl": "https://rzp.io/i/your-payment-link",
     "Questions": [
         {
             "Id": "q1",
